@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+@theme {
+  --color-celeste: #0088FF;
+  --color-violeta: #A56CC1;
+  --color-lila: #A6ACEC;
+  --color-naranja: #FF9000;
+  --color-azul: #163C86;
+  --color-azulClaro: #4A6AA7;
+  --color-blanco: #FFFFFF;
+  --color-negro: #000000;
+  --color-dark: #000000;
+}
+
+html,
+body {
+  font-family: Inter, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
