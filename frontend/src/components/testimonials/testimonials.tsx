@@ -43,19 +43,19 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-blanco py-16 px-6">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-azul mb-4">
+    <section className="flex items-center bg-blanco px-6 py-16 min-h-[80vh]">
+      <div className="mx-auto max-w-7xl text-center">
+        <h2 className="mb-4 font-bold text-azul text-4xl md:text-5xl lg:text-6xl">
           Testimonios de Pacientes
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+        <p className="mx-auto mb-12 max-w-2xl text-gray-600">
           Resaltan nuestro profesionalismo, la importancia del cuidado humanizado, la empatía del personal y la atención integral que reciben en situaciones difíciles
         </p>
 
         {/* Carrusel de Testimonios */}
         <div className="relative flex items-center">
           {/* Flecha de Navegación Izquierda */}
-          <button className="absolute -left-12 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full hidden lg:block">
+          <button className="hidden lg:block top-1/2 -left-12 absolute bg-transparent p-2 rounded-full -translate-y-1/2 transform">
             <svg
               className="w-12 h-12 text-azul"
               fill="none"
@@ -67,16 +67,19 @@ export default function Testimonials() {
             </svg>
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-3 w-full">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-lg p-6 text-left shadow-lg relative"
-              >
+                <div
+                  key={index}
+                  className="relative bg-gray-50 p-6 rounded-lg text-left"
+                  style={{
+                    boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.25), 4px 4px 12px rgba(0, 0, 0, 0.15)'
+                  }}
+                >
                 {/* Ícono de Comillas */}
-                <div className="absolute -top-3 right-6">
+                <div className="-top-3 right-6 absolute">
                     <svg
-                      className="w-8 h-8 text-lila opacity-50"
+                      className="opacity-50 w-8 h-8 text-lila"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +89,7 @@ export default function Testimonials() {
                 </div>
                 {/* Encabezado del Testimonio */}
                 <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                  <div className="mr-4 rounded-full w-16 h-16 overflow-hidden">
                     <img
                       src={testimonial.img}
                       alt={testimonial.name}
@@ -94,17 +97,17 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-azul">{testimonial.name}</h3>
-                    <p className="text-sm text-lila">{testimonial.role}</p>
+                    <h3 className="font-semibold text-azul text-lg">{testimonial.name}</h3>
+                    <p className="text-lila text-sm">{testimonial.role}</p>
                   </div>
-                  <div className="ml-auto flex items-center space-x-1">
+                  <div className="flex items-center space-x-1 ml-auto">
                     {renderStars(testimonial.rating)}
                   </div>
                 </div>
 
                 {/* Texto del Testimonio */}
                 <div className="mb-4">
-                  <p className="text-azul font-bold mb-2">{testimonial.text.split('.')[0]}.</p>
+                  <p className="mb-2 font-bold text-azul">{testimonial.text.split('.')[0]}.</p>
                   <p className="text-azul">{testimonial.text.split('.')[1]}.</p>
                 </div>
               </div>
@@ -112,7 +115,7 @@ export default function Testimonials() {
           </div>
 
           {/* Flecha de Navegación Derecha */}
-          <button className="absolute -right-12 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full hidden lg:block">
+          <button className="hidden lg:block top-1/2 -right-12 absolute bg-transparent p-2 rounded-full -translate-y-1/2 transform">
             <svg
               className="w-12 h-12 text-celeste"
               fill="none"

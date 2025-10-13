@@ -1,6 +1,10 @@
-export function Logo() {
+export function Logo({ width = 50, height = 50 }: { width?: number; height?: number }) {
     return (
-        <svg width="555" height="544" viewBox="0 0 555 544" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg       width={width}
+        height={height}
+        viewBox="0 0 555 544"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
             <path d="M272 231L239 262C162.947 201.475 113.03 176.953 7.5 150.5H159.5V1.5C181.818 99.1144 206.283 149.446 272 231Z" fill="white" stroke="white" />
             <path d="M170.5 1H389C363.369 104.786 338.751 152.866 278.5 222.5C213.851 143.328 189.767 94.9704 170.5 1Z" fill="white" stroke="white" />
             <path d="M286.5 232.5C297.132 247.484 304.393 254.568 320.5 264C411.819 192.356 462.168 170.116 551 151H400V2C377.894 93.1427 358.11 141.232 286.5 232.5Z" fill="white" stroke="white" />
