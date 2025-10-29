@@ -30,21 +30,29 @@ const Servicios: React.FC = () => {
     { icon: <IoBandageOutline size={40} className="text-blue-500" />, title: "Y otros" },
     //cuidados posoperatorios
     //curaciones
-    //higiene y confort
+   
     //administracion de medicamentos
   ];
 
   const cuidados: Item[] = [
-    { icon: <FaUtensils size={40} className="text-indigo-800" />, title: "Comida" },
+    { icon: <FaUtensils size={40} className="text-indigo-800" />, title: "Comida" },//quitar
     { icon: <FaBroom size={40} className="text-indigo-800" />, title: "Limpieza" },
     { icon: <FaPills size={40} className="text-indigo-800" />, title: "Control de medicación" },
     { icon: <IoBandageOutline size={40} className="text-indigo-800" />, title: "Apoyo personal" },
-    { icon: <MdWater size={40} className="text-indigo-800" />, title: "Hidratación" },
+    { icon: <MdWater size={40} className="text-indigo-800" />, title: "Hidratación" },//quitar
     { icon: <GiKneeCap size={40} className="text-indigo-800" />, title: "Movilización" },
     { icon: <FaHandHoldingMedical size={40} className="text-indigo-800" />, title: "Acompañamiento" },
-    { icon: <TbDropletCode size={40} className="text-indigo-800" />, title: "Higiene" },
+    { icon: <TbDropletCode size={40} className="text-indigo-800" />, title: "Higiene" }, //Cambiar por Estimulacion cognitiva
   ];
+ //otro item para kinesiologia
+ //cosas que pueden hacer los kinesiologos en casas particulares
+ //rehabilitacion postoperatorio
+ //mantenimiento funcional
 
+
+
+ // otro item para higiene y confort
+ // uñas, corte de pelos, tinturas
   const items = activeTab === "servicios" ? servicios : cuidados;
 
   return (
